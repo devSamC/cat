@@ -1,9 +1,12 @@
 package cat
 
-func Meow() string {
-	return "meow"
+import "github.com/devSamC/kitten"
+
+func Meow() func() string {
+	meow := kitten.Talk
+	return meow
 }
 
-func Meows() string {
-	return "meow meow meow"
+func Meows() func() string {
+	return kitten.Talks
 }
